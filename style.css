@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    background-color: #C02028;
+}
+
+:root {
+    --nunitos: 'Nunito Sans', sans-serif;
+    --texto20: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+#textoPrincipal {
+    color: #FFFFFF;
+    font-family: var(--nunitos);
+    font-style: italic;
+    font-size: var(--texto20);
+    text-align: center;
+    padding: 10px;
+    font-weight: normal;
+    margin-top: 100px; 
+    line-height: 1.5;
+}
+
+#TextodesbloquearMensagem {
+    color: #FFFFFF;
+    font-family: var(--nunitos);
+    font-style: italic;
+    font-size: var(--texto20);
+    text-align: center;
+    padding: 0px;
+    font-weight: normal;
+    margin-top: 80px; 
+}
+
+.coracoesImagem {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box; 
+    pointer-events: none;
+    z-index: 10;
+}
+
+.coracoesImagem img {
+    width: 60px; 
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+.coracoesImagem .c2 {
+    margin-right: 10px; 
+}
+
+.mensagemIcone {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+}
+
+.mensagemIcone img {
+    width: 60px; 
+    height: auto;
+    animation: balancar 2s ease-in-out infinite;
+}
+
+@media (max-width: 480px) {
+    #textoPrincipal {
+        margin-top: 90px; 
+        font-size: 23px;
+    }
+    #TextodesbloquearMensagem {
+        font-size: 23px;
+    }
+    .coracoesImagem img {
+        width: 75px; 
+    }
+
+    .coracoesImagem .c2 {
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+    #textoPrincipal {
+        margin-top: 85px;
+        font-size: 18px;
+    }
+    .coracoesImagem img {
+        width: 45px;
+    }
+    .coracoesImagem .c2 {
+        margin-right: 8px;
+    }
+}
+
+@keyframes flutuar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes balancar {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(10deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
