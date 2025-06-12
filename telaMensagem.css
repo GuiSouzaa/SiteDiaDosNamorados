@@ -55,6 +55,14 @@ body {
     object-fit: cover;
 }
 
+.posicao-cima {
+    object-position: center 90%;
+}
+
+.posicao-baixo {
+    object-position: center 20%;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .ContainerFotos {
